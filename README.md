@@ -13,3 +13,5 @@ For each assignment there should be a markdown file with the assignment descript
 Find that file and follow the instructions in it.
 
 When the evaluation session of the assignment is over, **do not forget** to upload the link to your repository to the virtual classroom.
+
+[Enlace a la presentación](https://docs.google.com/presentation/d/1BylCSeT9Z2J8eew8y-BiPmLDBQ64PzVnEg9Pot_rW2U/edit?usp=sharing)
