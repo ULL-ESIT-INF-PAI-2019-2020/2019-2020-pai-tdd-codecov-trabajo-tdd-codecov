@@ -17,5 +17,8 @@
     "babel-plugin-istanbul": "^6.0.0",
     "chai": "^4.2.0",
     "nyc": "^15.0.0"
+  },
+  "dependencies": {
+    "mocha": "^7.1.1"
   }
 }
