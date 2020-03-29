@@ -18,29 +18,30 @@
 const chai = require('chai');
 const expect = chai.expect;
  // Añadiendo mi programa
-const fib = require('../src/tdd/fib.js');
-const fibonacci = fib.fibonacci;
+const PMA = require('../src/tdd/punto-mas-alejado.js');
+const distanciaPuntoARecta = PMA.distanciaPuntoARecta;
+const puntoMasAlejado = PMA.puntoMasAlejado;
 
-describe('Probando función Fibonacci', () => {
-   // Primera parte test
-  it('Caso cero', () => {
-    expect(fibonacci(0)).to.equal(0);
+describe('Probando funciones de ConvexHull', () => {
+  const ORIGEN = {x: 0, y: 0};
+  let punto1 = {x: 1, y: 8};
+  let punto2 = {x: -2, y:4};
+  let punto3 = {x: 3, y: -2};
+  let recta1 = {m: 1, n: 0};
+  let recta2 = {m: 2, n: 4};
+  const ARRAY_PUNTOS = [punto1, punto2, punto3];
+  context('Probando la funcion distanciaPuntoARecta', () => {
+    it('Caso distancia 0', () => {
+      expect(distanciaPuntoARecta(ORIGEN, recta1)).to.equal(0);
+    });
+    it('Caso mas complejo', () => {
+      expect(parseFloat((distanciaPuntoARecta(punto1, recta1)).toFixed(3))).to.equal(4.950);
+    });
   });
-   // Segundo test
-  it('Caso uno', () => {
-    expect(fibonacci(1)).to.equal(1);
-  });
-   // Comienza triangular
-   // Tercer test - va a pasar
-  it('caso 2', () => {
-    expect(fibonacci(2)).to.equal(1);
-  });
-  // Cuarto test
-  it('caso 3', () => {
-    expect(fibonacci(3)).to.equal(2);
-  });
-  // Quinto test
-  it('caso 4', () => {
-    expect(fibonacci(4)).to.equal(3);
+  context('Probando la funcion puntoMasAlejado', () => {
+    it('Punto mas alejado del array', () => {
+      expect(puntoMasAlejado(ARRAY_PUNTOS, recta2)).to.equal(punto3);
+      expect(puntoMasAlejado(ARRAY_PUNTOS, recta1)).to.equal(punto1);
+    });
   });
 });
