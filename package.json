@@ -8,8 +8,9 @@
     "test": "test"
   },
   "scripts": {
-    "test": "mocha",
-    "coverage": "nyc --reporter lcovonly --reporter text npm test"
+    "test": "nyc mocha",
+    "coverage": "nyc --reporter lcov npm test",
+    "report-coverage": "nyc report --reporter lcovonly > coverage.lcov && codecov"
   },
   "author": "",
   "license": "ISC",
