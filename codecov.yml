@@ -1,4 +1,4 @@
-#codecov:
-#  token: 50860b88-d868-4ddb-9cd4-7201d4282783
-#script:
-#  bash <(curl -s https://codecov.io/bash)
+codecov:
+  token: 29ba3f8c-dc8a-493c-95b2-0b8361880ae1
+script:
+  bash <(curl -s https://codecov.io/bash)
