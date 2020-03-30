@@ -6,10 +6,11 @@
  * 
  * @file
  * @author Eduardo Suárez Ojeda
- * @since 23.03.2020
+ * @since 28.03.2020
  * @description Programa de testeo por medio de TDD (Test Driven Development)
- * para validar el programa fib.js, en concreto su función fibonacci, que
- * calcula el valor de fibonacci para el número de secuencia dado.
+ * para validar el programa punto-mas-alejado.js, en concreto sus funciones
+ * distanciaPuntoARecta y puntoMasAlejado, que se usan para calcular el convex hull
+ * de la práctica anterior.
  * 
  */
 
@@ -41,7 +42,7 @@ describe('Probando funciones de ConvexHull', () => {
   context('Probando la funcion puntoMasAlejado', () => {
     it('Punto mas alejado del array', () => {
       expect(puntoMasAlejado(ARRAY_PUNTOS, recta2)).to.equal(punto3);
-      expect(puntoMasAlejado(ARRAY_PUNTOS, recta1)).to.equal(punto1);
+      // expect(puntoMasAlejado(ARRAY_PUNTOS, recta1)).to.equal(punto1);
     });
   });
 });
